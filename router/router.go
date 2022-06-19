@@ -7,6 +7,8 @@ import (
 )
 
 func LoadRouter(r *gin.Engine) {
+	marsRoutes(r)
+
 	r.GET("/", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, gin.H{
 			"message": "Hello world!",
